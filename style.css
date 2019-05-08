@@ -15,12 +15,14 @@ a:visited {
   color: #8d75a3;
 }
 body {
-  margin: 1rem;
-  padding: 1rem;
   font-family: sans-serif;
   max-width: 28rem;
-  margin: 0 auto;
+  margin-left: 20vw;
+  margin-right: 20vw;
   position: relative;
+  background-image: url("img/bg.gif");
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: lighten;
 }
 #controls {
   display: flex;
@@ -74,3 +76,37 @@ li {
   margin-top: 0.5rem;
   font-size: 80%;
 }
+
+
+.loader {
+  margin-left: 10px;
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #ed341d; /* Blue */
+  border-radius: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+  display:none;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#content {
+  background-color: white;
+  width: 60vw;
+  height: 85vh;
+  border:20px dotted #ed341d;
+}
+
+#recordingsList {
+  overflow: auto;
+  height: 60vh;
+}
+/*
+#footer {
+  height: 15vh;
+}
+*/
